@@ -68,6 +68,8 @@ public class MainView extends JFrame {
         this.tareaController = tareaController;
         this.tareaTableModel = tareaTableModel;
         bind(proyectoTableModel,proyectoController, tareaController, tareaTableModel, proyectos, tareas);
+        tablaTareas.setVisible(false);
+        formTareaPanel.setVisible(false);
         //tablaTareas.setModel(tareaTableModel);
         addListeners();
         //anniadir todos los inits de los comboBox
@@ -206,6 +208,8 @@ public class MainView extends JFrame {
             tareaTableModel.setRows(new ArrayList<>());
             return;
         }
+        tablaTareas.setVisible(true);
+        formTareaPanel.setVisible(true);
         getTareas(p.getNumProyecto());
     }
 
