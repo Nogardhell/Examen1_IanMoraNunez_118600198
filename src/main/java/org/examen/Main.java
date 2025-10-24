@@ -34,7 +34,7 @@ public class Main {
         tareaService.addObserver(tareaTableModel);
         List<Proyecto> proyectos = proyectoService.leerTodos();
         List<Tarea> tareas = tareaService.leerTodos();
-        MainView ventana = new MainView(proyectoTableModel,proyectoController,proyectos,tareaController);
+        MainView ventana = new MainView(proyectoTableModel,proyectoController,proyectos,tareaController, tareaTableModel, tareas);
 
         ventana.getContentPanel();
         ventana.setVisible(true);
